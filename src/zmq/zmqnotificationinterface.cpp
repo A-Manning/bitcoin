@@ -97,7 +97,7 @@ bool CZMQNotificationInterface::Initialize()
 
     if (!pcontext)
     {
-        zmqError("Unable to initialize context");
+        zmqErrorDebug("Unable to initialize context");
         return false;
     }
 

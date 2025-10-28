@@ -1757,6 +1757,8 @@ bool AppInitMain(NodeContext& node, interfaces::BlockAndHeaderTipInfo* tip_info)
 
     if (g_zmq_notification_interface) {
         validation_signals.RegisterValidationInterface(g_zmq_notification_interface.get());
+    } else {
+        return InitError(Untranslated("Initializing ZMQ interface failed."));
     }
 #endif
 
